@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".Aboutme">
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/iv_foto"
+        android:src="@drawable/abun"
+       />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toEndOf="@+id/iv_foto"
+    android:layout_toRightOf="@+id/iv_foto"
+    android:orientation="vertical">
+
+
+       <TextView
+           android:id="@+id/nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama : Muhammad Akbar R "
+           android:layout_margin="9dp"
+           android:textSize="16sp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email : maasakbar111@gamil.com"
+        android:layout_margin="9dp"
+        android:textSize="16sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Telpon : 083130002336"
+        android:layout_margin="9dp"
+        android:textSize="16sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alamat : jl mawar gg 1 no 17"
+        android:layout_margin="9dp"
+        android:textSize="16sp"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_profil.*
 
 class ProfilActivity : AppCompatActivity() {
@@ -26,6 +25,7 @@ class ProfilActivity : AppCompatActivity() {
         ambilData()
         btnEdit.setOnClickListener { navigasiKeEditProfil() }
         btncall.setOnClickListener { dialPhoneNumber(txtTelpon.text.to {}) }
+        btnabout.setOnClickListener{gotoAbout()}
     }
 
 
@@ -54,6 +54,10 @@ class ProfilActivity : AppCompatActivity() {
         startActivityForResult(intent, REQUEST_CODE)
 
     }
+    private fun gotoAbout(){
+        val intent = Intent(this, Aboutme::class.java)
+        startActivity(intent)
+    }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -62,19 +66,17 @@ class ProfilActivity : AppCompatActivity() {
                 val result = data?.getStringExtra("nama")
                 txtNama.text = result
             } else {
-                Toast.makeText(this, "Edit failed",
-                    Toast.LENGTH_SHORT).show()
-
+                Toast.makeText(this, "Edit failed", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
     private fun dialPhoneNumber(phoneNumber: Pair<CharSequence, Any>) {
-        val intent = Intent(Intent.ACTION_DIAL).apply {
+        val dialIntent = Intent(Intent.ACTION_DIAL).apply {
             data = Uri.parse("tel:$phoneNumber")
         }
-        if (intent.resolveActivity(packageManager) != null) {
-            startActivity(intent)
+        if (dialIntent.resolveActivity(packageManager) != null) {
+            startActivity(dialIntent)
         }
 
     }

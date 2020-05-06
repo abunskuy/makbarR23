@@ -180,6 +180,12 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:text="Telepon"/>
+            <Button
+                android:id="@+id/btnabout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="About Me"/>
         </LinearLayout>
 
     </RelativeLayout>

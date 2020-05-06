@@ -11,21 +11,28 @@ class EditProfilActifity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_profil_actifity)
-    val intentData=intent.extras
-        val namaUser=intentData?.getString("nama")
-        edtProfilName.setText(namaUser)
-        btnedit.setOnClickListener { saveData() }
+        val intentData = intent.extras
+        val nameUser = intentData?.getString("nama")
 
+        edtProfilName.setText(nameUser)
+
+        btnedit.setOnClickListener { saveData() }
     }
+
     private fun saveData(){
-        val namaEdit=edtProfilName.text.toString()
-        if(!namaEdit.isEmpty()){
-            val result= Intent()
-            result.putExtra("nama",namaEdit)
-            setResult(Activity.RESULT_OK,result)
-        }else{
+        val nameEdit = edtProfilName.text.toString()
+        if (!nameEdit.isEmpty()) {
+            val result = Intent()
+
+            result.putExtra("nama", nameEdit)
+            setResult(Activity.RESULT_OK, result)
+        } else {
+
             setResult(Activity.RESULT_CANCELED)
+
+
         }
         finish()
     }
 }
+
