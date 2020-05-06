@@ -36,14 +36,14 @@ class ProfilActivity : AppCompatActivity() {
         val umur = bundle?.getString("umur")
         val telpon = bundle?.getString("telpon")
         val alamat = bundle?.getString("alamat")
-        val email = bundle?.getString("email")
+        val Email = bundle?.getString("Email")
 
         txtNama.text = nama
         txtJenisKelamin.text = spinner
         txtTelpon.text = telpon
         txtjalan.text = alamat
         txtumur.text = umur
-        txtEmail.text = email
+        txtEmail.text = Email
 
     }
 

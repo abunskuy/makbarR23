@@ -15,7 +15,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setDataSpinner()
-        btnSimpan.setOnClickListener { goToProfilActivity () }
+
+        btnSimpan.setOnClickListener { validasiInput () }
     }
 
 
@@ -73,10 +74,10 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this,ProfilActivity::class.java)
         val bundle=Bundle()
         bundle.putString("nama",namaInput)
-        bundle.putString("Spinner",spinnerInput)
+        bundle.putString("spinner",spinnerInput)
         bundle.putString("Email",EmailInput)
         bundle.putString("telpon",telponInput)
-        bundle.putString("Alamat",alamatInput)
+        bundle.putString("alamat",alamatInput)
         bundle.putString("umur",umurInput)
 
         intent.putExtras(bundle)
