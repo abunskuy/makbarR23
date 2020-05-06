@@ -19,8 +19,6 @@ class ProfilActivity : AppCompatActivity() {
         setContentView(R.layout.activity_profil)
 
 
-        btnEdit.setOnClickListener {}
-
         ambilData()
         btnEdit.setOnClickListener { navigasiKeEditProfil() }
         btncall.setOnClickListener { dialPhoneNumber(txtTelpon.text.toString()) }

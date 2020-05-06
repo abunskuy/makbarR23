@@ -23,14 +23,7 @@ class MainActivity : AppCompatActivity() {
         btnSimpan.setOnClickListener { validasiInput () }
     }
 
-
-     fun goToProfilActivity(function: () -> Unit) {
-        val intent = Intent(this, ProfilActivity::class.java)
-        startActivity(intent)
-
-    }
-
-    fun validasiInput() {
+   private fun validasiInput() {
         namaInput = nama.text.toString()
         EmailInput = Email.text.toString()
         telponInput = telpon.text.toString()

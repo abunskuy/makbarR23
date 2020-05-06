@@ -14,13 +14,13 @@ class EditProfilActifity : AppCompatActivity() {
         val intentData = intent.extras
         val nameUser = intentData?.getString("nama")
 
-        edtProfilName.setText(nameUser)
+        nama.setText(nameUser)
 
         btnedit.setOnClickListener { saveData() }
     }
 
     private fun saveData(){
-        val nameEdit = edtProfilName.text.toString()
+        val nameEdit = nama.text.toString()
         if (!nameEdit.isEmpty()) {
             val result = Intent()
 
