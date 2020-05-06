@@ -5,7 +5,6 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_profil.*
 
@@ -24,7 +23,7 @@ class ProfilActivity : AppCompatActivity() {
 
         ambilData()
         btnEdit.setOnClickListener { navigasiKeEditProfil() }
-        btncall.setOnClickListener { dialPhoneNumber(txtTelpon.text.to {}) }
+        btncall.setOnClickListener { dialPhoneNumber(txtTelpon.text.toString()) }
         btnabout.setOnClickListener{gotoAbout()}
     }
 
@@ -71,7 +70,7 @@ class ProfilActivity : AppCompatActivity() {
         }
     }
 
-    private fun dialPhoneNumber(phoneNumber: Pair<CharSequence, Any>) {
+    private fun dialPhoneNumber(phoneNumber: String) {
         val dialIntent = Intent(Intent.ACTION_DIAL).apply {
             data = Uri.parse("tel:$phoneNumber")
         }
