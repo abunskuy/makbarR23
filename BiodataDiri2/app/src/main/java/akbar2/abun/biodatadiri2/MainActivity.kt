@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setDataSpinner()
-        btnSimpan.setOnClickListener { goToProfilActivity {} }
+        btnSimpan.setOnClickListener { goToProfilActivity () }
     }
 
 
