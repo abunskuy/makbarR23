@@ -60,11 +60,10 @@ class ProfilActivity : AppCompatActivity() {
         if (requestCode == REQUEST_CODE) {
             if (resultCode == Activity.RESULT_OK) {
                 val result = data?.getStringExtra("nama")
+                txtNama.text = result
             } else {
-                Toast.makeText(
-                    this, "Edit failed",
-                    Toast.LENGTH_SHORT
-                ).show()
+                Toast.makeText(this, "Edit failed",
+                    Toast.LENGTH_SHORT).show()
 
             }
         }
